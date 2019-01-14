@@ -640,7 +640,7 @@ comp.start = function(){
 		//SMOKE-------------------------------------
 		
 		
-		if(comp.rival.x >= 670){//Finish
+		if(comp.rival.x >= 600){//Finish
 			//comp.rival.x=-500;
 			clearInterval(compLoop);
 			delete compLoop;
@@ -963,8 +963,8 @@ comp.startBOT = function(){
 	ownRPM = 200;
 	rivalRPM = 300; //Обороты двигателя об/мин
 	rivalForce=3000; //Сила толкания
-	var ownTireK = 1+(comp.own.car.tires)/10;//Коэфициент трения резины
-	var botTireK = 1+(comp.rival.car.tires)/10;//Коэфициент трения резины
+	var ownTireK = 1+(comp.own.car.tires)/1;//Коэфициент трения резины
+	var botTireK = 1+(comp.rival.car.tires)/100;//Коэфициент трения резины
 	//console.log(ownTireK,botTireK);
 	
 	var power = testPower(comp.own.car);
@@ -1144,7 +1144,7 @@ comp.startBOT = function(){
 		//SMOKE+++++++++++++++++++++++++++++++++++++
 			mySmoke.step(n);
 		//SMOKE-------------------------------------
-		if(comp.rival.x >= 550){//win
+		if(comp.rival.x >= 360){//win
 			clearInterval(compLoop);
 
 			query={}; 
